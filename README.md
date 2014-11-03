@@ -30,45 +30,25 @@ Last constructor not used in the current FractionApp class, but is included for 
 * public Fraction times(Fraction f) // multiplies 2 fractions / returns reduced fraction result
 
 * public Fraction divide(Fraction f) // divides 2 fractions / returns reduced fraction result
-=======
-public Fraction(int n, int d) // #1) create Fraction object with passed in num, denom
 
-public Fraction(int n) // #2) create Fraction object w/passed in num, denom=1
-
-public Fraction() // #3) create Fraction object with num =1, denom=1
-Last constructor not used in the current FractionApp class, but is included for later compatibility
-
-public String toString() // used to display fraction in format num/denom (ex: 2/3)
-
-public boolean equals (Fraction f) // true if the num/denum of 2 reduced fractions are equal
-
-public Fraction plus(Fraction f) // adds 2 fractions and returns reduced fraction result
-
-public Fraction minus(Fraction f) // subtracts 2 fractions / returns reduced fraction result
-
-public Fraction times(Fraction f) // multiplies 2 fractions / returns reduced fraction result
-
-public Fraction divide(Fraction f) // divides 2 fractions / returns reduced fraction result
->>>>>>> FETCH_HEAD
-
-private void reduce ( ) // modifies num/denom so fraction reduced to lowest terms
+* private void reduce ( ) // modifies num/denom so fraction reduced to lowest terms
 (Suggestion: Call this method at the end of Constructor #1 )
 
 The toString method returns a string that can be used to display the reduced fraction in the format
 numerator/denominator (i.e. 2/3 or 3/1). Do not print within the toString method. The plus method should
 return a new Fraction object that is THIS Fraction (i.e. fraction object invoking the method) plus f
-<<<<<<< HEAD
-(i.e. thefraction object pass to the method). The minus,times, and divide method will be similar, but with a different operation. At some point, each Fraction should be reduced to lowest terms. Where or how you do this is up
-=======
-(i.e. thefraction object pass to the method). Theminus,times, and divide method will be similar, but with a different operation. At some point, each Fraction should be reduced to lowest terms. Where or how you do this is up
->>>>>>> FETCH_HEAD
+(i.e. thefraction object pass to the method). The minus,times, and divide method will be similar, but with a different 
+operation. At some point, each Fraction should be reduced to lowest terms. Where or how you do this is up
+
 to you, but make sure they are reduced before they are displayed.
 
 Specifics of the Application Class: 
 
 Your driver program (FractionApp) should contain only a main method – optional methods are acceptable
 as long as they are not a required part of the Fraction class (such as a parseString method)
-but try to keep to a minimum.  Create an array that will hold 3 Fraction objects – the first element will 
+but try to keep to a minimum.  
+
+Create an array that will hold 3 Fraction objects – the first element will 
 hold the first value in the equation as a reduced fraction; the second element will hold the second value as a 
 reduced fraction; and the third element will hold the result of the operation as a reduced fraction.
 
