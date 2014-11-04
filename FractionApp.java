@@ -22,8 +22,8 @@ public class FractionApp {
 		int n2 = Integer.parseInt(numAndDom2[0]);
 		int d2 = Integer.parseInt(numAndDom2[1]);
 
-		//Fraction fraction1 = new Fraction (n1, d1);
-		//Fraction fraction2 = new Fraction (n2, d2);
+		Fraction fraction1 = new Fraction (n1, d1);
+		Fraction fraction2 = new Fraction (n2, d2);
 
 
 	} // closes main

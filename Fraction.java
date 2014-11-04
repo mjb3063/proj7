@@ -27,42 +27,42 @@ public class Fraction {
 
 
 	public String toString () {
-		return
+		return " ";
 	} // closes toString
 
 
-	public Boolean equals (Fraction f) {
-
+	public boolean equals (Fraction f) {
+		return true;
 	} // closes Boolean
 
 
 	public String plus (Fraction f) {
 
-
+		return " ";
 	} // closes Plus
 
 
 	public String minus (Fraction f) {
 
-
+		return " ";
 	} // closes Minus
 
 
 	public String times (Fraction f) {
 
-
+		return " ";
 	} // closes Times
 
 
 	public String divide (Fraction f) {
 
-
+		return " ";
 	} // closes divide
 
 
 	private void reduce (Fraction f) {
 
-
+	
 	} // closes reduce
 
 
