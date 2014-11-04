@@ -8,7 +8,7 @@ public class Fraction {
 	int numerator;
 	int denominator;
 	
-	public Fraction (int n, int d){
+	public Fraction (int n, int d) {
 		numerator = n;
 		denominator = d;
 	} // closes fraction 2 variable
@@ -27,38 +27,53 @@ public class Fraction {
 
 
 	public String toString () {
-		return " ";
+		return this.numerator + " / " + this.denominator;
 	} // closes toString
 
 
 	public boolean equals (Fraction f) {
-		return true;
+
+		return ((numerator == f.numerator) && (denominator == f.denominator));
 	} // closes Boolean
 
 
-	public String plus (Fraction f) {
+	public Fraction plus (Fraction f) {
 
-		return " ";
+		int newDenom = this.denominator * f.denominator;
+		int newNum1 = this.numerator * f.denominator;
+		int newNum2 = f.numerator * this.denominator;
+		int num3 = newNum1 + newNum2;
+		Fraction fraction3 = new Fraction (num3, newDenom);
+
+		return fraction3;
 	} // closes Plus
 
 
-	public String minus (Fraction f) {
+	public Fraction minus (Fraction f) {
+		int newDenom = this.denominator * f.denominator;
+		int newNum1 = this.numerator * f.denominator;
+		int newNum2 = f.numerator * this.denominator;
+		int num3 = newNum1 - newNum2;
+		Fraction fraction3 = new Fraction (num3, newDenom);
 
-		return " ";
+		return fraction3;
 	} // closes Minus
 
 
-	public String times (Fraction f) {
-
-		return " ";
+	public Fraction times (Fraction f) {
+		int newDenom = this.denominator * f.denominator;
+		int newNum = this.numerator * f.numerator;
+		Fraction fraction3 = new Fraction (newNum, newDenom);
+		return fraction3;
 	} // closes Times
 
 
-	public String divide (Fraction f) {
-
-		return " ";
+	public Fraction divide (Fraction f) {
+		int newNum = this.numerator * f.denominator;
+		int newDenom = this.denominator * f.numerator;
+		Fraction fraction3 = new Fraction(newNum, newDenom);
+		return fraction3;
 	} // closes divide
-
 
 	private void reduce (Fraction f) {
 
