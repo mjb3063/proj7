@@ -25,22 +25,25 @@ public class FractionApp {
 				int d2 = Integer.parseInt(numAndDom2[1]);
 				Fraction fraction1 = new Fraction (n1, d1);
 				Fraction fraction2 = new Fraction (n2, d2);
+				Fraction fraction3 = new Fraction ();
 				Fraction [] fractionArray = new Fraction [3]; // makes object array
 				char signChar = holdingArray[1].charAt(0); // this makes the sign a char
 				int signInt = (int)signChar; // this converts the char to a ASCII int
 				//System.out.println(signInt); // for testing purposes only
 				if (signInt == 43) { // this is plus
-					fractionArray[2] = fraction1.plus(fraction2);
+					fraction3 = fraction1.plus(fraction2);
 				} // closes plus for
 				else if(signInt == 45) { // this is minus
-					fractionArray[2] = fraction1.minus(fraction2);
+					fraction3 = fraction1.minus(fraction2);
 				} // closes minus for
 				else if(signInt == 42) { // this is multiply
-					fractionArray[2] = fraction1.times(fraction2);
+					fraction3 = fraction1.times(fraction2);
 				} // closes multiply for
 				else { //this is divide
-					fractionArray[2] = fraction1.divide(fraction2);
+					fraction3 = fraction1.divide(fraction2);
 				} // closes divide for
+				fraction3.reduce(fraction3);
+				fractionArray[2] = fraction3;
 				System.out.println("The answer is: " + fractionArray[2].toString());
 			} // closes first if
 
@@ -50,22 +53,25 @@ public class FractionApp {
 				int n2 = Integer.parseInt(numAndDom2[0]);
 				Fraction fraction1 = new Fraction (n1, d1);
 				Fraction fraction2 = new Fraction (n2);
+				Fraction fraction3 = new Fraction ();
 				Fraction [] fractionArray = new Fraction [3]; // makes object array
 				char signChar = holdingArray[1].charAt(0); // this makes the sign a char
 				int signInt = (int)signChar; // this converts the char to a ASCII int
 				//System.out.println(signInt); // for testing purposes only
 				if (signInt == 43) { // this is plus
-					fractionArray[2] = fraction1.plus(fraction2);
+					fraction3 = fraction1.plus(fraction2);
 				} // closes plus for
 				else if(signInt == 45) { // this is minus
-					fractionArray[2] = fraction1.minus(fraction2);
+					fraction3 = fraction1.minus(fraction2);
 				} // closes minus for
 				else if(signInt == 42) { // this is multiply
-					fractionArray[2] = fraction1.times(fraction2);
+					fraction3 = fraction1.times(fraction2);
 				} // closes multiply for
 				else { //this is divide
-					fractionArray[2] = fraction1.divide(fraction2);
+					fraction3 = fraction1.divide(fraction2);
 				} // closes divide for
+				fraction3.reduce(fraction3);
+				fractionArray[2] = fraction3;
 				System.out.println("The answer is: " + fractionArray[2].toString());
 			} // closes 2nd if
 

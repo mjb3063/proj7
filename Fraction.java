@@ -75,9 +75,29 @@ public class Fraction {
 		return fraction3;
 	} // closes divide
 
-	private void reduce (Fraction f) {
+	public void reduce (Fraction f) {
+		int a = 0;
+		int b = 0;
+		int r = 0;
+		if (f.numerator < f.denominator){
+			a = f.denominator;
+			b = f.numerator;
+		}
+		else{
+			a = f.numerator;
+			b = f.denominator;
+		}
+		while (a != b) {
+			r = a - b;
+			a = b;
+			b = r;
+			System.out.println("this is a,b,r" + a + b + r); // for testing purposes only
+		numerator = numerator / r;
+		denominator = denominator/r;
+		}
 
-	
+
+   
 	} // closes reduce
 
 
