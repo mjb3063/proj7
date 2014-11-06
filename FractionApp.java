@@ -42,9 +42,11 @@ public class FractionApp {
 				else { //this is divide
 					fraction3 = fraction1.divide(fraction2);
 				} // closes divide for
-				fraction3.reduce(fraction3);
+				fraction3.reduce();
+				fractionArray[0] = fraction1;
+				fractionArray[1] = fraction2;
 				fractionArray[2] = fraction3;
-				System.out.println("The answer is: " + fractionArray[2].toString());
+				System.out.println("the answer is: " + fractionArray[0].toString() + " " + holdingArray[1] + " " + fractionArray[1].toString() + " = " + fractionArray[2].toString());
 			} // closes first if
 
 			if(passTogetNandD2.length() == 1){
@@ -70,9 +72,10 @@ public class FractionApp {
 				else { //this is divide
 					fraction3 = fraction1.divide(fraction2);
 				} // closes divide for
-				fraction3.reduce(fraction3);
+				fractionArray[0] = fraction1;
+				fractionArray[1] = fraction2;
 				fractionArray[2] = fraction3;
-				System.out.println("The answer is: " + fractionArray[2].toString());
+				System.out.println("the answer is: " + fractionArray[0].toString() + " " + holdingArray[1] + " " + fractionArray[1].toString() + " = " + fractionArray[2].toString());
 			} // closes 2nd if
 
 	} // closes main

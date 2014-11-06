@@ -27,7 +27,7 @@ public class Fraction {
 
 
 	public String toString () {
-		return this.numerator + " / " + this.denominator;
+		return this.numerator + "/" + this.denominator;
 	} // closes toString
 
 
@@ -75,32 +75,29 @@ public class Fraction {
 		return fraction3;
 	} // closes divide
 
-	public void reduce (Fraction f) {
-		int a = 0;
-		int b = 0;
-		int r = 0;
-		if (f.numerator < f.denominator){
-			a = f.denominator;
-			b = f.numerator;
-		}
-		else{
-			a = f.numerator;
-			b = f.denominator;
-		}
-		while (a != b) {
-			r = a - b;
-			a = b;
-			b = r;
-			System.out.println("this is a,b,r" + a + b + r); // for testing purposes only
-		numerator = numerator / r;
-		denominator = denominator/r;
-		}
+	public void reduce () {
+		int temp = 1;
+
+		if (numerator > 1) {
+			temp = -1;
+			numerator = numerator * (-1);
+		} // closes temp to make to positive number
+
+		System.out.println("the numerator is now: " + numerator); // for testing purposes only
+
+		for (int i = 9; i > 1; i--){
+			if ((numerator % i == 0) &&(denominator % i == 0)){
+				numerator = numerator/i;
+				denominator = denominator/i;
+			} // closes if
+		} //closes for
+		
+		if (temp == -1){
+			numerator = numerator * (-1);
+		} // changes back to neg number
 
 
-   
 	} // closes reduce
-
-
 } // closes class FractionObject
 
 
