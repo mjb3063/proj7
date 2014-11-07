@@ -47,6 +47,12 @@ public class FractionApp {
 				fractionArray[1] = fraction2;
 				fractionArray[2] = fraction3;
 				System.out.println("the answer is: " + fractionArray[0].toString() + " " + holdingArray[1] + " " + fractionArray[1].toString() + " = " + fractionArray[2].toString());
+				if (fraction1.equals(fraction2) == true){
+					System.out.println("Fraction 1 DOES equal fraction 2");
+				}//closes if
+				else {
+					System.out.println("Fraction 1 DOES NOT equal fraction 2");
+				} // closes else
 			} // closes first if
 
 			if(passTogetNandD2.length() == 1){
@@ -72,10 +78,17 @@ public class FractionApp {
 				else { //this is divide
 					fraction3 = fraction1.divide(fraction2);
 				} // closes divide for
+				fraction3.reduce();
 				fractionArray[0] = fraction1;
 				fractionArray[1] = fraction2;
 				fractionArray[2] = fraction3;
 				System.out.println("the answer is: " + fractionArray[0].toString() + " " + holdingArray[1] + " " + fractionArray[1].toString() + " = " + fractionArray[2].toString());
+				if (fraction1.equals(fraction2) == true){
+					System.out.println("Fraction 1 DOES equal fraction 2");
+				}//closes if
+				else {
+					System.out.println("Fraction 1 DOES NOT equal fraction 2");
+				}//closes ele
 			} // closes 2nd if
 
 	} // closes main

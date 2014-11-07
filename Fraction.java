@@ -33,7 +33,7 @@ public class Fraction {
 
 	public boolean equals (Fraction f) {
 
-		return ((numerator == f.numerator) && (denominator == f.denominator));
+		return ((this.numerator == f.numerator) && (this.denominator == f.denominator));
 	} // closes Boolean
 
 
@@ -78,22 +78,22 @@ public class Fraction {
 	public void reduce () {
 		int temp = 1;
 
-		if (numerator > 1) {
+		if (numerator < 1) {
 			temp = -1;
-			numerator = numerator * (-1);
+			numerator = (numerator * (-1));
 		} // closes temp to make to positive number
 
-		System.out.println("the numerator is now: " + numerator); // for testing purposes only
+		//System.out.println("the numerator is now: " + numerator); // for testing purposes only
 
 		for (int i = 9; i > 1; i--){
-			if ((numerator % i == 0) &&(denominator % i == 0)){
+			if ((numerator % i == 0) && (denominator % i == 0)){
 				numerator = numerator/i;
 				denominator = denominator/i;
 			} // closes if
 		} //closes for
 		
-		if (temp == -1){
-			numerator = numerator * (-1);
+		if (temp == -1) {
+			numerator = (numerator * (-1));
 		} // changes back to neg number
 
 
